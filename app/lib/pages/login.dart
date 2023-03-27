@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import '../shared/constam_textfield.dart';
+
 class login extends StatelessWidget {
   const login({super.key});
 
@@ -12,24 +14,19 @@ class login extends StatelessWidget {
         padding: const EdgeInsets.all(33.0),
         child: Scaffold(
           body: Column(children: [
-            TextField(
-                keyboardType: TextInputType.text,
-                obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "Enter Your Password : ",
-                  // To delete borders
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: Divider.createBorderSide(context),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ),
-                  ),
-                  // fillColor: Colors.red,
-                  filled: true,
-                  contentPadding: const EdgeInsets.all(8),
-                ))
+            mytextfiled(
+              hinttextt: 'enter your email',
+              textInputTypee: TextInputType.emailAddress,
+              ispassword: false,
+            ),
+            const SizedBox(
+              height: 33,
+            ),
+            mytextfiled(
+              hinttextt: 'enter your password',
+              textInputTypee: TextInputType.emailAddress,
+              ispassword: true,
+            ),
           ]),
         ),
       ),
