@@ -9,39 +9,52 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(
-        actions: [
-          Row(
-            children: [
-              Container(
-                  child: Text(
-                    "8",
+          drawer: Drawer(
+            child: Column(children: [
+              UserAccountsDrawerHeader(
+                  accountEmail: Text("ziad@yahoo.com"),
+                  accountName: Text(
+                    "ziadzakria",
                     style: TextStyle(
-                        fontSize: 8, color: Color.fromARGB(255, 0, 0, 0)),
-                  ),
-                  padding: EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(211, 164, 255, 193),
-                      shape: BoxShape.circle)),
-              Stack(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                    ),
+                  ))
+            ]),
+          ),
+          appBar: AppBar(
+            actions: [
+              Row(
                 children: [
-                  IconButton(
-                      onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+                  Container(
+                      child: Text(
+                        "8",
+                        style: TextStyle(
+                            fontSize: 8, color: Color.fromARGB(255, 0, 0, 0)),
+                      ),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(211, 164, 255, 193),
+                          shape: BoxShape.circle)),
+                  Stack(
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.add_shopping_cart)),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 11.0),
+                    child: Text(
+                      "\$ 13",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 11.0),
-                child: Text(
-                  "\$ 13",
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
             ],
-          ),
-        ],
-        backgroundColor: appbarGreen,
-        title: Text("home"),
-      )),
+            backgroundColor: appbarGreen,
+            title: Text("home"),
+          )),
     );
   }
 }
