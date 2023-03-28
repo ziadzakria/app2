@@ -17,8 +17,26 @@ class MyWidget extends StatelessWidget {
                   mainAxisSpacing: 33),
               itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
-                return Container();
-              }),
+                return GridTile(child: GestureDetector(
+ onTap: () { },
+// use ClipRRect & Positioned
+  child: Image.asset("img PATH")
+   ),
+   
+ footer: GridTileBar(
+// backgroundColor: Color.fromARGB(66, 73, 127, 110),
+    trailing: IconButton(
+      color: Color.fromARGB(255, 62, 94, 70),
+      onPressed: () { },
+      icon: Icon(Icons.add)),
+
+ leading: Text("\$12.99"),
+
+ title: Text("",),),
+ )
+ 
+              }
+              ),
           drawer: Drawer(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
