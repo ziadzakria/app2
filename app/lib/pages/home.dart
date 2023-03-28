@@ -1,18 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../model/item.dart';
 import 'colors.dart';
 
-class Item {
-  String imgpath;
-  double price;
-  Item({required this.imgpath, required this.price});
-}
-
 class home extends StatelessWidget {
-  List item = [
-    Item(imgpath: "", price: 12.66),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +16,7 @@ class home extends StatelessWidget {
                     childAspectRatio: 3 / 2,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 33),
-                itemCount: 4,
+                itemCount: item.length,
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {},
