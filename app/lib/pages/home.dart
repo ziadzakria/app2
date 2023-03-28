@@ -10,16 +10,33 @@ class MyWidget extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           drawer: Drawer(
-            child: Column(children: [
-              UserAccountsDrawerHeader(
-                  accountEmail: Text("ziad@yahoo.com"),
-                  accountName: Text(
-                    "ziadzakria",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                    ),
-                  ))
-            ]),
+            child: Column(
+              children: [
+                UserAccountsDrawerHeader(
+                    accountEmail: Text("ziad@yahoo.com"),
+                    accountName: Text(
+                      "ziadzakria",
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                    )),
+                ListTile(
+                    title: Text("Home"),
+                    leading: Icon(Icons.home),
+                    onTap: () {}),
+                ListTile(
+                    title: Text("My products"),
+                    leading: Icon(Icons.add_shopping_cart),
+                    onTap: () {}),
+                ListTile(
+                    title: Text("About"),
+                    leading: Icon(Icons.help_center),
+                    onTap: () {}),
+                ListTile(
+                    title: Text("Logout"),
+                    leading: Icon(Icons.exit_to_app),
+                    onTap: () {}),
+              ],
+            ),
           ),
           appBar: AppBar(
             actions: [
