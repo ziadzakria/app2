@@ -39,9 +39,9 @@ class detils extends StatelessWidget {
           ),
         ],
         backgroundColor: appbarGreen,
-        title: Text("home"),
+        title: Text("detils"),
       ),
-      body: Text("detils"),
+      body: Text("\$ 12.33"),
     );
   }
 }
