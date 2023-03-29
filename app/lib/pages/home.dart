@@ -6,6 +6,7 @@ import '../model/item.dart';
 import '../shared/appbar.dart';
 import 'colors.dart';
 import 'details screen.dart';
+import 'package:app/shared/appbar.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
