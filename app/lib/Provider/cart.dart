@@ -9,4 +9,11 @@ class cart with ChangeNotifier {
     price += prodact.price.round();
     notifyListeners();
   }
+
+  delet() {
+    selectedProducts.add(protected);
+
+    price -= protected.price.round();
+    notifyListeners();
+  }
 }
