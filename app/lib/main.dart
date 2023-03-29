@@ -1,3 +1,4 @@
+import 'package:app/pages/details%20screen.dart';
 import 'package:app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/reister.dart';
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: login(),
+    return MaterialApp(
+      home: detils(),
     );
   }
 }
