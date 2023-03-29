@@ -42,6 +42,55 @@ class detils extends StatelessWidget {
         title: Text("detils"),
       ),
       body: Text("\$ 12.33"),
-    );
+
+
+      
+         
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(4),
+                    child: Text("new",style: TextStyle(fontSize: 20),),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 255, 129,129),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  )
+                  
+                    Row(
+                      children: [
+                        Icon(
+                            Icons.star,
+                        size: 23,
+                         color: Color.fromARGB(255, 255, 192,0),
+ Icon(
+                            Icons.star,
+                        size: 23,
+                         color: Color.fromARGB(255, 255, 192,0), Icon(
+                            Icons.star,
+                        size: 23,
+                         color: Color.fromARGB(255, 255, 192,0),
+
+
+                          ),
+                      ],
+                    )
+
+                  
+                  
+                  )
+              
+              )
   }
-}
+            
+          
+          
+          
+          
+          
+      
+        
+    
+    
+  }
+
