@@ -50,7 +50,7 @@ class checkout extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8))),
               ),
               child: Text(
-                "click here",
+                "pay\$  ${carttt.price}",
                 style: TextStyle(fontSize: 19),
               ),
             ),
