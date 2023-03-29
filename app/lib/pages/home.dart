@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../Provider/cart.dart';
 import '../model/item.dart';
 import 'colors.dart';
 import 'details screen.dart';
@@ -9,6 +11,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final carttt = Provider.of<cart>(context);
+
     return Scaffold(
         body: Padding(
           padding: const EdgeInsets.only(top: 22),
@@ -37,12 +41,12 @@ class Home extends StatelessWidget {
                     footer: GridTileBar(
                       trailing: IconButton(
                           color: Color.fromARGB(255, 62, 94, 70),
-                          onPressed: () {},
+                          onPressed: () {
+                            carttt.add(item[index]);
+                          },
                           icon: Icon(Icons.add)),
                       leading: Text("\$12.99"),
-                      title: Text(
-                        "",
-                      ),
+                      title: Text(""),
                     ),
                   ),
                 );
