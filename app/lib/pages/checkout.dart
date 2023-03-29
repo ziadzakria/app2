@@ -18,26 +18,43 @@ class checkout extends StatelessWidget {
           title: Text("checkout screen"),
           actions: [prodactandprice()],
         ),
-        body: SingleChildScrollView(
-          child: SizedBox(
-            height: 300,
-            child: ListView.builder(
-                padding: const EdgeInsets.all(8),
-                itemCount: carttt.selectedProducts.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                    child: ListTile(
-                      subtitle: Text("TEST"),
-                      leading: CircleAvatar(
-                        backgroundImage: AssetImage("PATH"),
-                      ),
-                      title: Text("TEST"),
-                      trailing: IconButton(
-                          onPressed: () {}, icon: Icon(Icons.remove)),
-                    ),
-                  );
-                }),
-          ),
+        body: Column(
+          children: [
+            SingleChildScrollView(
+              child: SizedBox(
+                height: 300,
+                child: ListView.builder(
+                    padding: const EdgeInsets.all(8),
+                    itemCount: carttt.selectedProducts.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Card(
+                        child: ListTile(
+                          subtitle: Text("TEST"),
+                          leading: CircleAvatar(
+                            backgroundImage: AssetImage("PATH"),
+                          ),
+                          title: Text("TEST"),
+                          trailing: IconButton(
+                              onPressed: () {}, icon: Icon(Icons.remove)),
+                        ),
+                      );
+                    }),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.orange),
+                padding: MaterialStateProperty.all(EdgeInsets.all(12)),
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8))),
+              ),
+              child: Text(
+                "click here",
+                style: TextStyle(fontSize: 19),
+              ),
+            ),
+          ],
         ));
   }
 }
