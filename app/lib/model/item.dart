@@ -6,4 +6,7 @@ class Item {
 
 List item = [
   Item(imgpath: "kshdsk", price: 12.66),
+  Item(imgpath: "kshdsk", price: 12.66),
+  Item(imgpath: "kshdsk", price: 12.66),
+  Item(imgpath: "kshdsk", price: 12.66),
 ];
