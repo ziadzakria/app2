@@ -3,6 +3,7 @@ import 'package:app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/reister.dart';
 import 'package:app/pages/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Home());
+    return ChangeNotifierProvider(
+    create: (context) {return Class prziad();},
+
+      child: MaterialApp(home: Home()));
   }
 }
